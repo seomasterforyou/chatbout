@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 st.set_page_config(page_title="Harry Chatbot", layout="centered")
-st.title("💬 Gemini Chatbot")
+st.title("💬 Harry's Chatbot")
 
 # Pull API key from Streamlit secrets
 API_KEY = st.secrets["GEMINI_API_KEY"]
@@ -23,4 +23,5 @@ if user_message:
 
     with st.chat_message("assistant"):
         st.markdown(response.text)
+
 
