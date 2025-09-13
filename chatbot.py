@@ -4,7 +4,8 @@ import google.generativeai as genai
 st.set_page_config(page_title="Gemini Chatbot", layout="centered")
 st.title("💬 Gemini Chatbot")
 
-API_KEY = st.secrets["AIzaSyBWka9iF-Y2IQ_Aoi1SUfY6SpVKVktfHCs"]   # pulled from secrets
+# Pull API key from Streamlit secrets
+API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
 
 model = genai.GenerativeModel("gemini-1.5-flash")
