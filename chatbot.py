@@ -13,7 +13,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 if "chat" not in st.session_state:
     st.session_state.chat = model.start_chat(history=[])
 
-user_message = st.chat_input("Type your message…")
+user_message = st.chat_input("Chat with Harry…")
 
 if user_message:
     with st.chat_message("user"):
@@ -23,5 +23,6 @@ if user_message:
 
     with st.chat_message("assistant"):
         st.markdown(response.text)
+
 
 
